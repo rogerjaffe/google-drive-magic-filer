@@ -20,10 +20,21 @@
  * folder is placed in the appropriate folder.  If it doesn't have a code, then the contents of
  * folder are searched for files or folders that have a code.
  * 
+ * Setup Step 1:
+ *
  * The spreadsheet URL shown in the SHEET_URL constant below points to the spreadsheet containing the 
  * special codes and the path to the folder in which the documents should be placed. Open the sheet
  * at the URL in the code to see a sample.  The DROP_FOLDER_URL points to the G-Drive folder that 
  * acts as the "drop folder".
+ * 
+ * Setup Step 2:
+ * 
+ * Open up Google Drive at https://drive.google.com and log in with a Google account.  Click New |
+ * More | Google Apps Script.  Erase the boilerplate code and copy the code in this file.  Set
+ * the URLs of the spreadsheet (SHEET_URL) and the drop folder URL (DROP_FOLDER_URL).
+ *
+ * To run the script make sure to select the magicFiler function, then click the Run button.  The
+ * script will take several seconds to run.
  *
  * Let me know if you find this useful!  rogerjaffe@gmail.com
  *
