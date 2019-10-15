@@ -57,7 +57,7 @@
  *
  * Let me know if you find this useful!  rogerjaffe@gmail.com
  *
-*/
+ */
 
 /**
  * Function to bootstrap the application
