@@ -51,6 +51,9 @@
  *    from the Shared with me folder in your Google drive to the 1DropBox folder
  * 4. Select magicFiler in the drop down right under the "Resources" menu
  * 5. Click the Run arrow (underneath the "Publish" menu)
+ *    Note: The first time you run the program you will be asked to give permission.
+ *          Follow the prompts to give your permission so the program can access
+ *          your Google document files and folders.
  *
  *    You can add more files / folders to the spreadsheet list at any time and
  *    you can run the program at any time.
