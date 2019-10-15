@@ -1,6 +1,8 @@
 /**
  * Google Drive Magic Filer V1.0.0 Roger Jaffe
  *
+ * TL;DR -- If you just want to get started, see the quickstart guide below
+ * 
  * I am a teacher and my students do their work on Google Drive and share their documents with me.
  * I needed a quicker way to organize their work in folders in My Drive instead of dragging and 
  * dropping the files one by one to their appropriate filing folder for later grading. I have several 
