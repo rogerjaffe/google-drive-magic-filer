@@ -1,7 +1,7 @@
 /**
  * Google Drive Magic Filer V1.0.0 Roger Jaffe
  *
- * TL;DR -- If you just want to get started, see the quickstart guide below
+ * TL;DR -- See the quickstart guide below
  * 
  * I am a teacher and my students do their work on Google Drive and share their documents with me.
  * I needed a quicker way to organize their work in folders in My Drive instead of dragging and 
@@ -109,9 +109,11 @@ function processItems(items, srcFolder, codes, isFolder) {
   while (items.hasNext()) {
     var item = items.next();
     var name = item.getName();
+    var moved = null;
     for (var i=0; i<codes.length; i++) {
       if (name.toLowerCase().indexOf(codes[i].code.toLowerCase()) >= 0) {
         var destFolder = getDriveFolder(codes[i].dest);
+        moved = destFolder.getName();
         if (isFolder) {
           destFolder.addFolder(item);
           srcFolder.removeFolder(item);
@@ -120,6 +122,11 @@ function processItems(items, srcFolder, codes, isFolder) {
           srcFolder.removeFile(item);
         }
       }
+    }
+    if (moved) {
+      Logger.log("File name: "+name+" moved to "+moved);
+    } else {
+      Logger.log("File name: "+name+" was not moved");
     }
   }
 }  
