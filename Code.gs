@@ -111,16 +111,14 @@ function processItems(items, srcFolder, codes, isFolder) {
     var name = item.getName();
     var moved = null;
     for (var i=0; i<codes.length; i++) {
-      if (name.toLowerCase().indexOf(codes[i].code.toLowerCase()) >= 0) {
-        var destFolder = getDriveFolder(codes[i].dest);
-        moved = destFolder.getName();
-        if (isFolder) {
-          destFolder.addFolder(item);
-          srcFolder.removeFolder(item);
-        } else {
-          destFolder.addFile(item);
-          srcFolder.removeFile(item);
+      try {
+        if (name.toLowerCase().indexOf(codes[i].code.toLowerCase()) >= 0) {
+          var destFolder = getDriveFolder(codes[i].dest);
+          item.moveTo(destFolder);
+          moved = destFolder.getName();
         }
+      } catch(e) {
+        Logger.log(e);
       }
     }
     if (moved) {
